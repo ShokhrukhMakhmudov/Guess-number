@@ -3,7 +3,10 @@ const input = document.querySelector("input"),
   guess = document.querySelector(".guess"),
   checkButton = document.querySelector("button"),
   remainChances = document.querySelector(".chances"),
-  highscore = document.querySelector(".highscore");
+  highscore = document.querySelector(".highscore"),
+  exitToMenu = document.querySelector("#exitToMenu"),
+  playBtn = document.querySelector("#playBtn"),
+  exitBtn = document.querySelector("#exitBtn");
 
 // Get highscore from local storage
 if (localStorage.getItem("highscore")) {
@@ -84,4 +87,15 @@ checkButton.addEventListener("click", () => {
     ];
     [guess.textContent, guess.style.color] = ["You lost the game", "#e74c3c"];
   }
+});
+
+playBtn.addEventListener("click", () => {
+  document.querySelector(".menu").classList.add("hidden");
+  document.querySelector(".wrapper").classList.remove("hidden");
+  resetGame();
+});
+
+exitToMenu.addEventListener("click", () => {
+  document.querySelector(".menu").classList.remove("hidden");
+  document.querySelector(".wrapper").classList.add("hidden");
 });

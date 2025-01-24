@@ -83,7 +83,7 @@ input::-webkit-outer-spin-button {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-.exit-btn {
+.btn {
   height: 50px;
   width: calc(100% / 2 - 20px);
   outline: none;
@@ -97,6 +97,15 @@ input::-webkit-outer-spin-button {
   cursor: pointer;
   transition: 0.3s;
 }
-.exit-btn:active {
+.menu {
+  width: 100%;
+  max-width: 375px;
+  margin-inline: 10px;
+  text-align: center;
+}
+.btn:active {
   transform: scale(0.9);
+}
+.hidden {
+  display: none;
 }

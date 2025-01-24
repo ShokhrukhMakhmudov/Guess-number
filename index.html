@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div id="game" class="wrapper hidden">
       <p class="label-highscore">
         🥇 Highscore: <span class="highscore">0</span>
       </p>
@@ -18,7 +18,19 @@
         <button>Check</button>
       </div>
       <p>You have <span class="chances">10</span> chances</p>
-      <button class="exit-btn" type="button" name="button">Exit</button>
+      <button id="exitToMenu" class="btn" type="button" name="button">
+        Exit
+      </button>
+    </div>
+    <div class="menu wrapper">
+      <p>
+        In this game, the computer or bot will randomly select a number that you
+        will not know, and you have to guess the number based on the hints
+        provided, with 10 chances to make the correct guess.
+      </p>
+      <button id="playBtn" class="btn" type="button" name="button">Play</button>
+      <br />
+      <button id="exitBtn" class="btn" type="button" name="button">Exit</button>
     </div>
     <script src="script.js"></script>
   </body>
